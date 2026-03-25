@@ -123,7 +123,7 @@ NO  → Change strategy
 ## System Architecture
 
 <p align="center">
-  <img src="./assets/system-architecture.svg" width="900"/>
+  <img src="./assets/cognitiveint_socraticmind_system_design.svg" width="900"/>
 </p>
 
 ---
