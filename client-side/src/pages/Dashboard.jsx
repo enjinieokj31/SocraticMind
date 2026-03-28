@@ -12,6 +12,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-bg-primary">
+
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div
@@ -83,8 +84,8 @@ export default function Dashboard() {
                               background: item.covered >= 75
                                 ? 'linear-gradient(90deg, #7C3AED, #8B5CF6)'
                                 : item.covered >= 50
-                                ? 'linear-gradient(90deg, #06B6D4, #22D3EE)'
-                                : 'linear-gradient(90deg, #EF4444, #F87171)',
+                                  ? 'linear-gradient(90deg, #06B6D4, #22D3EE)'
+                                  : 'linear-gradient(90deg, #EF4444, #F87171)',
                             }}
                           />
                         </div>
@@ -117,13 +118,12 @@ export default function Dashboard() {
                           <td className="py-4 pr-4 text-text-primary font-medium">{interview.role}</td>
                           <td className="py-4 pr-4 text-text-muted">{interview.duration}</td>
                           <td className="py-4 pr-4">
-                            <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${
-                              interview.overallScore >= 70
-                                ? 'bg-violet/15 text-violet-light'
-                                : interview.overallScore >= 55
+                            <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${interview.overallScore >= 70
+                              ? 'bg-violet/15 text-violet-light'
+                              : interview.overallScore >= 55
                                 ? 'bg-cyan/15 text-cyan-light'
                                 : 'bg-red-500/15 text-red-400'
-                            }`}>
+                              }`}>
                               {interview.overallScore}%
                             </span>
                           </td>
@@ -166,11 +166,10 @@ export default function Dashboard() {
                       <h4 className="font-semibold text-text-primary">{interview.role}</h4>
                       <p className="text-xs text-text-dim mt-1">{interview.date} · {interview.duration}</p>
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      interview.overallScore >= 70
-                        ? 'bg-violet/15 text-violet-light'
-                        : 'bg-cyan/15 text-cyan-light'
-                    }`}>
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${interview.overallScore >= 70
+                      ? 'bg-violet/15 text-violet-light'
+                      : 'bg-cyan/15 text-cyan-light'
+                      }`}>
                       {interview.overallScore}%
                     </span>
                   </div>
@@ -209,13 +208,12 @@ export default function Dashboard() {
                   <div key={item.id} className="glass-card p-6 hover:glass-card-hover transition-all duration-300">
                     <div className="flex items-center justify-between mb-3">
                       <h4 className="font-semibold text-text-primary">{item.topic}</h4>
-                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold ${
-                        item.status === 'mastered'
-                          ? 'bg-green-500/15 text-green-400'
-                          : item.status === 'in_progress'
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold ${item.status === 'mastered'
+                        ? 'bg-green-500/15 text-green-400'
+                        : item.status === 'in_progress'
                           ? 'bg-cyan/15 text-cyan-light'
                           : 'bg-red-500/15 text-red-400'
-                      }`}>
+                        }`}>
                         {item.status === 'mastered' ? '✓ Mastered' : item.status === 'in_progress' ? '⟳ In Progress' : '⚠ Needs Work'}
                       </span>
                     </div>
@@ -233,8 +231,8 @@ export default function Dashboard() {
                           background: item.masteryLevel >= 70
                             ? 'linear-gradient(90deg, #10B981, #34D399)'
                             : item.masteryLevel >= 40
-                            ? 'linear-gradient(90deg, #06B6D4, #22D3EE)'
-                            : 'linear-gradient(90deg, #EF4444, #F87171)',
+                              ? 'linear-gradient(90deg, #06B6D4, #22D3EE)'
+                              : 'linear-gradient(90deg, #EF4444, #F87171)',
                         }}
                       />
                     </div>

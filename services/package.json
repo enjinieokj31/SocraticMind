@@ -1,0 +1,16 @@
+{
+  "name": "socraticmind-services",
+  "version": "1.0.0",
+  "description": "Root package to run all microservices concurrently",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix auth\" \"npm run dev --prefix oauth\" \"npm run dev --prefix dashboard\" \"npm run dev --prefix interview\"",
+    "start": "concurrently \"npm start --prefix auth\" \"npm start --prefix oauth\" \"npm start --prefix dashboard\" \"npm start --prefix interview\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

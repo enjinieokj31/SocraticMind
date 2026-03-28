@@ -52,11 +52,11 @@ export default function AuthModal({ isOpen, onClose, defaultMode = 'login' }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-fade-in"
         onClick={onClose}
       />
-      
+
       {/* Modal Content */}
       <div className="relative w-full max-w-md bg-bg-primary/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden animate-slide-up">
         {/* Glow decoration */}
@@ -65,7 +65,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = 'login' }) {
         <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-cyan/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="p-8 relative z-10">
-          <button 
+          <button
             onClick={onClose}
             className="absolute top-4 right-4 text-text-muted hover:text-white transition-colors"
           >
@@ -78,8 +78,8 @@ export default function AuthModal({ isOpen, onClose, defaultMode = 'login' }) {
             {mode === 'login' ? 'Welcome back' : 'Create an account'}
           </h2>
           <p className="text-text-muted text-sm text-center mb-8">
-            {mode === 'login' 
-              ? 'Enter your details to access your dashboard.' 
+            {mode === 'login'
+              ? 'Enter your details to access your dashboard.'
               : 'Start your journey with Cognitive Intelligence.'}
           </p>
 
@@ -91,25 +91,25 @@ export default function AuthModal({ isOpen, onClose, defaultMode = 'login' }) {
                   type="text"
                   required
                   value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-2.5 bg-black/40 border border-white/10 rounded-xl text-white placeholder-text-dim focus:outline-none focus:border-violet/50 focus:ring-1 focus:ring-violet/50 transition-all"
                   placeholder="John Doe"
                 />
               </div>
             )}
-            
+
             <div>
               <label className="block text-sm font-medium text-text-muted mb-1.5">Email Address</label>
               <input
                 type="email"
                 required
                 value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full px-4 py-2.5 bg-black/40 border border-white/10 rounded-xl text-white placeholder-text-dim focus:outline-none focus:border-violet/50 focus:ring-1 focus:ring-violet/50 transition-all"
                 placeholder="you@example.com"
               />
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-text-muted mb-1.5">Password</label>
               <input
@@ -117,7 +117,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = 'login' }) {
                 required
                 minLength={6}
                 value={formData.password}
-                onChange={(e) => setFormData({...formData, password: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 className="w-full px-4 py-2.5 bg-black/40 border border-white/10 rounded-xl text-white placeholder-text-dim focus:outline-none focus:border-violet/50 focus:ring-1 focus:ring-violet/50 transition-all"
                 placeholder="••••••••"
               />
